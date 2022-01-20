@@ -1,0 +1,15 @@
+
+# https://pypi.org/project/html2image/ (Library)
+from html2image import Html2Image
+import os, sys
+# Open a file
+path = "/Users/lauraalvarez/PycharmProjects/htmltoimage/files"
+dirs = os.listdir( path )
+
+
+hti = Html2Image(output_path=pathimages)
+for file in dirs:
+    if file.endswith(".html"):
+        # Change the images size
+        hti.screenshot(html_file=f"{pathfiles}/{file}", save_as=f"{file}.png", size=(1500, 1500))
+
